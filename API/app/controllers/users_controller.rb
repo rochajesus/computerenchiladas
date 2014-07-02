@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
   skip_before_filter :require_login, only: [:index, :new, :create]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  belongs_to :instructor
-  has_one :instructor
 
   # GET /users
   # GET /users.json
